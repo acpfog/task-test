@@ -41,7 +41,7 @@ class Test4(TestCase):
 
 # Check if log message #1 was successfully stored
 class Test5(TestCase):
-    def test_reader_get_request(self):
+    def test_reader_get_request_1(self):
         resp = requests.get('http://localhost:8000/stats')
         self.assertEqual(resp.json(), {'log             ':1})
 
@@ -53,7 +53,7 @@ class Test6(TestCase):
 
 # Check if log message #2 was successfully stored
 class Test7(TestCase):
-    def test_reader_get_request(self):
+    def test_reader_get_request_2(self):
         resp = requests.get('http://localhost:8000/stats')
         self.assertEqual(resp.json(), {'log             ':1, 'warning         ': 1})
 
@@ -65,7 +65,7 @@ class Test8(TestCase):
 
 # Check if log message #3 was successfully stored
 class Test9(TestCase):
-    def tert_reader_get_request(self):
+    def test_reader_get_request_3(self):
         resp = requests.get('http://localhost:8000/stats')
         self.assertEqual(resp.json(), {'log             ':1, 'warning         ': 1, 'error           ': 1})
 
